@@ -13,6 +13,7 @@ export default function App() {
   }
   function calculate() {
     var diffrences = cashPaid - billAmount;
+    setDisplay(diffrences);
     console.log(diffrences);
   }
   return (
@@ -45,7 +46,7 @@ export default function App() {
         Check
       </button>
 
-      <h1>{}</h1>
+      <h1>{display}</h1>
     </div>
   );
 }
