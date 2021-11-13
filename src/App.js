@@ -2,13 +2,14 @@ import "./styles.css";
 import React, { useState } from "react";
 
 export default function App() {
-  var [output, setOutput] = useState(0);
-  var [secondOutput, setSecondOutput] = useState(0);
+  var [billAmount, setBillAmount] = useState(0);
+  var [cashPaid, setCashPaid] = useState(0);
+  var [display, setDisplay] = useState(0);
   function inputChangeHandler(e) {
-    setOutput(e.target.value);
+    setBillAmount(e.target.value);
   }
   function secondInputHandler(e) {
-    setSecondOutput(e.target.value);
+    setCashPaid(e.target.value);
   }
   function calculate() {
     var diffrences = secondOutput - output;
@@ -44,10 +45,7 @@ export default function App() {
         Check
       </button>
 
-      <h1>
-        {output}
-        {secondOutput}
-      </h1>
+      <h1>{}</h1>
     </div>
   );
 }
