@@ -12,7 +12,7 @@ export default function App() {
     setCashPaid(e.target.value);
   }
   function calculate() {
-    var diffrences = secondOutput - output;
+    var diffrences = cashPaid - billAmount;
     console.log(diffrences);
   }
   return (
