@@ -19,7 +19,12 @@ export default function App() {
       <h1>Cash Manager</h1>
       <label style={{ display: "block" }}>Bill Amount </label>
       <input
-        style={{ padding: "0.5rem", borderRadius: "0.5rem", border: "white" }}
+        style={{
+          textAlign: "center",
+          padding: "0.5rem",
+          borderRadius: "0.5rem",
+          border: "white"
+        }}
         type="number"
         onChange={inputChangeHandler}
       ></input>
@@ -27,7 +32,7 @@ export default function App() {
       <label style={{ display: "block", margin: "1rem" }}>Cash paid </label>
       <input
         style={{
-          display: "block",
+          textAlign: "center",
           padding: "0.5rem",
           borderRadius: "0.5rem",
           border: "white"
@@ -35,7 +40,9 @@ export default function App() {
         type="number"
         onChange={secondInputHandler}
       ></input>
-      <button onClick={calculate}>Check</button>
+      <button style={{}} onClick={calculate}>
+        Check
+      </button>
 
       <h1>
         {output}
