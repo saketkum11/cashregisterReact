@@ -4,7 +4,7 @@ import React, { useState } from "react";
 export default function App() {
   var [billAmount, setBillAmount] = useState(0);
   var [cashPaid, setCashPaid] = useState(0);
-  var [display, setDisplay] = useState(0);
+  var [display, setDisplay] = useState("");
   var currency = [2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
   function inputChangeHandler(e) {
     setBillAmount(e.target.value);
@@ -12,9 +12,19 @@ export default function App() {
   function secondInputHandler(e) {
     setCashPaid(e.target.value);
   }
+  function message(msg) {
+    setDisplay();
+  }
   function calculate() {
-    var diffrences = cashPaid - billAmount;
-    setDisplay(diffrences);
+    if (cashPaid != "" || billAmount != "") {
+      if (cashPaid > 0 && billAmount > 0) {
+        var diffrences = cashPaid - billAmount;
+        setDisplay(diffrences);
+      } else {
+        setDisplay("Enter value positive");
+      }
+    } else {
+    }
   }
   return (
     <div className="App">
