@@ -5,6 +5,7 @@ export default function App() {
   var [billAmount, setBillAmount] = useState(0);
   var [cashPaid, setCashPaid] = useState(0);
   var [display, setDisplay] = useState(0);
+  var currency = [2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
   function inputChangeHandler(e) {
     setBillAmount(e.target.value);
   }
@@ -14,7 +15,6 @@ export default function App() {
   function calculate() {
     var diffrences = cashPaid - billAmount;
     setDisplay(diffrences);
-    console.log(diffrences);
   }
   return (
     <div className="App">
